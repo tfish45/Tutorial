@@ -1,5 +1,7 @@
 package com.makatojava.intro;
 
+// Some comments to test Github access
+
 import java.util.logging.Logger;
 
 public class Person {
