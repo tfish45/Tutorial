@@ -1,6 +1,7 @@
 package com.makatojava.intro;
 
 // Some comments to test Github access
+// Some more comments, for the same reason
 
 import java.util.logging.Logger;
 
