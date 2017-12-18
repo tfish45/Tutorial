@@ -1,8 +1,5 @@
 package com.makatojava.intro;
 
-// Some comments to test Github access
-// Some more comments, for the same reason
-
 import java.util.logging.Logger;
 
 public class Person {
@@ -15,18 +12,17 @@ public class Person {
 		  this.gender = gender;
 	}
 	
-	private String name;
+	//private String name;
+	private String firstName;
+	private String lastName;
 	private int age;
 	private int height;
 	private int weight;
 	private String eyeColor;
 	private String gender;
 	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
+	public String getFullName() {
+		  return getFirstName().concat(" ").concat(getLastName());
 	}
 	public int getAge() {
 		return age;
@@ -35,7 +31,11 @@ public class Person {
 		this.age = age;
 	}
 	public int getHeight() {
-		return height;
+		int ret = height;
+		// If locale of the computer this code is running on is U.S.,
+		if (Locale.getDefault().equals(Locale.US))
+			ret /= 2.54;// convert from cm to inches
+		return ret;
 	}
 	public void setHeight(int height) {
 		this.height = height;
@@ -59,4 +59,18 @@ public class Person {
 		this.gender = gender;
 	}
 	Logger l = Logger.getLogger(getClass().getName());
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 	}
